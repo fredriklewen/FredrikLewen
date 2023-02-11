@@ -19,9 +19,9 @@ addEventListener('DOMContentLoaded', function () {
             const backButton = document.getElementById("projects-back");
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get("origin") === "resume") {
-                backButton.href = "../../resume/";
+                backButton.href = "./resume.html";
             } else {
-                backButton.href = "../";
+                backButton.href = "./";
             }
         });
     }
