@@ -152,6 +152,7 @@ h3 {
     color: var(--primary);
     letter-spacing: 0.02em;
     margin-bottom: 0;
+    text-align: left;
 }
 
 b {
@@ -416,6 +417,17 @@ p a:hover, li a:hover {
     margin: auto;
     /* color: white;
     background-color: var(--accent-dark); */
+}
+#email-btn {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+#email-btn .btn {
+    padding: 10px 50px;
+}
+#email-btn .btn:hover {
+    padding: 14px 54px;
 }
 
 .back-btn {
