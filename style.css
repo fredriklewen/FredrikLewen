@@ -1,13 +1,9 @@
 :root {
-    --main-bg: #c0b4ac;
-    --light-bg: #f8f6f5;
-    --primary: #5c5755;
-    --secondary: #757373;
-    --accent-bright: rgb(62, 72, 131);
-    --accent-dark: rgb(43, 50, 78);
-    --text: #3a3939;
-
-    /* --background: linear-gradient(45deg, rgb(37, 37, 114), rgb(87, 28, 87)); */
+    --light-bg: rgb(247, 247, 247);
+    --primary: rgb(23, 23, 85);
+    --accent-dark: rgb(102, 33, 102);
+    --text: black;
+    --gradient: linear-gradient(45deg, rgb(18, 18, 63), rgb(73, 23, 73));
 }
 
 html {
@@ -27,7 +23,7 @@ body {
 /* NAVBAR */
 
 nav {
-    background-color: var(--primary); 
+    background: var(--gradient);
     display: grid;
     grid-template-rows: 20px;
     grid-template-columns: 1fr 1fr;
@@ -58,7 +54,7 @@ h1 {
     font-weight: 100;
     letter-spacing: 0.1em;
     text-align: center;
-    color: var(--primary);
+    color: var(--text);
     margin: 60px auto 0;
     text-transform: uppercase;
 }
@@ -69,6 +65,7 @@ h1 {
     font-weight: bold;
     letter-spacing: 0;
     margin: 0 auto;
+    color: var(--primary);
 }
 
 h2 {
@@ -93,7 +90,7 @@ b {
 }
 
 .text-div b {
-    color: var(--main-bg);
+    color: var(--accent-dark);
     font-size: small;
 }
 
@@ -117,7 +114,7 @@ li {
 }
 
 .sub-h1 {
-    color: var(--secondary);
+    color: var(--text);
     font-size: 20px;
     letter-spacing: 0.1em;
 }
@@ -133,7 +130,7 @@ li {
     margin: 0.5em;
 }
 #dl-pdf a {
-    color: var(--accent-bright);
+    color: var(--accent-dark);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -141,7 +138,7 @@ li {
 }
 #dl-pdf a:hover {
     text-decoration: none;
-    color: var(--accent-dark);
+    color: var(--primary);
     transform: translate(0, 0.2em);
     transition: all 300ms;
 }
@@ -170,6 +167,8 @@ li {
     min-height: calc(100vh - 70px);
     padding: 0 8%;
     background-color: var(--light-bg);
+    box-shadow: 0 5px 10px lightgray;
+
 }
 #image-div {
     width: 35%;
@@ -212,13 +211,13 @@ li {
 #scroll-down {
     position: absolute;
     font-size: large;
-    color: var(--main-bg);
+    color: var(--accent-dark);
     top: calc(100vh - 100px);
     cursor: pointer;
 }
 #scroll-down :hover{
     transition: 200ms;
-    background-color: var(--main-bg);
+    background-color: var(--accent-dark);
     color: var(--light-bg);
     border-radius: 50px;
     padding: 4px;
@@ -230,11 +229,11 @@ li {
     cursor: pointer;
     text-align: right;
     margin: 40px 0 0 auto;
-    color: var(--main-bg);
+    color: var(--primary);
 }
 .scroll-up:hover{
     transition: all 200ms;
-    color: var(--primary);
+    color: var(--accent-dark);
 }
 
 .grid {
@@ -292,12 +291,11 @@ li {
 /* LINKS AND BUTTONS */
 
 p a, li a {
-    color: var(--accent-bright);
+    color: var(--accent-dark);
     text-underline-offset: 8px;
     transition: all 300ms;
 }
 p a:hover, li a:hover {
-    text-decoration: underline;
     text-underline-offset: 12px;
     transition: all 300ms;
 }
@@ -313,7 +311,7 @@ p a:hover, li a:hover {
 .btn {
     color: white;
     text-decoration: none;
-    background-color: var(--accent-dark); 
+    background: var(--gradient);
     padding: 10px 0;
     width: 80%;
     margin: auto;
@@ -343,7 +341,7 @@ p a:hover, li a:hover {
 .back-btn {
     position: absolute;
     font-size: large;
-    color: var(--main-bg);
+    color: var(--accent-dark);
     top: 84px;
     text-decoration: none;
     letter-spacing: 0.1em;
@@ -351,7 +349,7 @@ p a:hover, li a:hover {
     cursor: pointer;
 }
 .back-btn :hover{
-    color: var(--secondary);
+    color: var(--primary);
     transition: all 200ms;
 }
 
@@ -377,7 +375,7 @@ p a:hover, li a:hover {
 /* FOOTER */
 
 footer {
-    background-color: var(--primary);
+    background: var(--gradient);
     color: white;
     text-align: center;
     padding: 40px;
@@ -402,7 +400,7 @@ i {
 }
 
 #copyright {
-    color: var(--main-bg);
+    color: var(--light-bg); 
     margin-top: 40px;
 }
 
@@ -471,10 +469,6 @@ i {
 }
 
 @media (max-width: 500px) {
-    nav a:hover {
-        transform: none;
-    }
-
     h1 {
         margin-top: 30px;
     }
@@ -515,3 +509,8 @@ i {
     }
 }
 
+@media (max-width: 400px) {
+    .btn {
+        font-size: 12px;
+    }
+}
